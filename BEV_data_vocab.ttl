@@ -47,7 +47,13 @@
     bev:work_order_type, bev:priority, bev:work_center, bev:work_order_start, bev:work_order_end,
     bev:total_costs, bev:part_costs, bev:labour_costs, bev:time_in_workshop, bev:logistic_delay,
     bev:time_to_repair, bev:idle_time, bev:mean_time_to_repair, bev:mean_time_between_failures,
-    bev:mean_time_between_maintenance .
+    bev:mean_time_between_maintenance, bev:mean_down_time, bev:calendar_time, bev:scheduled_time,
+    bev:unscheduled_time, bev:down_time, bev:available_time, bev:standby_time, bev:operating_standby_time,
+    bev:external_standby_time, bev:operating_time, bev:operating_delay, bev:working_time,
+    bev:non-productive_time, bev:productive_time, bev:up_time, bev:availability, bev:physical_availability,
+    bev:mechanical_availability, bev:use_of_availability, bev:asset_utilization, bev:operating_utilization,
+    bev:effective_utilization, bev:operating_efficiency, bev:production_effectiveness,
+    bev:overall_equipment_effectiveness, bev:mean_operating_time .
 
 bev:vehicle_data a skos:Collection;
   skos:prefLabel "Vehicle Data"@en;
@@ -819,193 +825,159 @@ bev:mean_down_time a skos:Concept;
   skos:prefLabel "Mean Down Time"@en;
   skos:definition "Mean down time"@en;
   skos:notation "MDT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:calendar_time a skos:Concept;
   skos:prefLabel "Calendar Time"@en;
   skos:definition "Total time available"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:scheduled_time a skos:Concept;
   skos:prefLabel "Scheduled Time"@en;
   skos:definition "Time spent assigned to a task (scheduled time = calendar time - unscheduled time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:unscheduled_time a skos:Concept;
   skos:prefLabel "Unscheduled Time"@en;
   skos:definition "Time spent unassigned to any tasks"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:down_time a skos:Concept;
   skos:prefLabel "Down Time"@en;
   skos:definition "Time equipment is unavailable to perform its intended tasks"@en;
   skos:notation "DT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:available_time a skos:Concept;
   skos:prefLabel "Available Time"@en;
   skos:definition "Time equipment is available to perform its intended tasks (available time = scheduled time - down time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:standby_time a skos:Concept;
   skos:prefLabel "Standby Time"@en;
   skos:definition "Time equipment is available but not operating (standby time = operating standby time + external standby time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_standby_time a skos:Concept;
   skos:prefLabel "Operating Standby Time"@en;
   skos:definition "Time spent on standby for reasons within management control"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:external_standby_time a skos:Concept;
   skos:prefLabel "External Standby Time"@en;
   skos:definition "Time spent on standby for reasons outside of management control"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_time a skos:Concept;
   skos:prefLabel "Operating Time"@en;
   skos:definition "Time equipment is available and operating (operating time = available time - standby time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_delay a skos:Concept;
   skos:prefLabel "Operating Delay"@en;
   skos:definition "Time equipment is operating but temporarily stalled due to delays/working environment conditions"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:working_time a skos:Concept;
   skos:prefLabel "Working Time"@en;
   skos:definition "Time equipment is operating as intended, carrying out both productive and non-productive tasks (working time = operating time - operating delay)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:non-productive_time a skos:Concept;
   skos:prefLabel "Non-Productive Time"@en;
   skos:definition "Time spent on required tasks that do not directly contribute to production"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:productive_time a skos:Concept;
   skos:prefLabel "Productive Time"@en;
   skos:definition "Time spent carrying out tasks that directly contribute to production (productive time = working time - non-productive time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:up_time a skos:Concept;
   skos:prefLabel "Up Time"@en;
   skos:definition "The time equipment is capable of operating (Uptime = Available Time / Calendar Time)"@en;
   skos:notation "UT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:availability a skos:Concept;
   skos:prefLabel "Availability"@en;
   skos:definition "Time equipment is available outside of scheduled and unscheduled downtime (Availability = MTBM / (MTBM + MDT))"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:physical_availability a skos:Concept;
   skos:prefLabel "Physical Availability"@en;
   skos:definition "The percentage of time equipment is available to perform its intended function over a defined period when it is required by the operation"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mechanical_availability a skos:Concept;
   skos:prefLabel "Mechanical Availability"@en;
   skos:definition "The time the equipment is available as a percentage of the time it is required by the operation"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:use_of_availability a skos:Concept;
   skos:prefLabel "Use of Availability"@en;
   skos:definition "The time the equipment is operated as a percentage of the available time"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:asset_utilization a skos:Concept;
   skos:prefLabel "Asset Utilization"@en;
   skos:definition "The time the equipment is being operated as a percentage of the total time available"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_utilization a skos:Concept;
   skos:prefLabel "Operating Utilization"@en;
   skos:definition "The percentage of time the asset is being operated when it is scheduled to operate"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:effective_utilization a skos:Concept;
   skos:prefLabel "Effective Utilization"@en;
   skos:definition "The time the equipment is used to perform its intended function as a percentage of the time that it is scheduled to work"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_efficiency a skos:Concept;
   skos:prefLabel "Operating Efficiency"@en;
   skos:definition "The time the equipment is performing its intended function asa percentage of the time that it is operating"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:production_effectiveness a skos:Concept;
   skos:prefLabel "Production Effectiveness"@en;
   skos:definition "The time the equipment is directly contributing to production as a percentage of the time that it is operating"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:overall_equipment_effectiveness a skos:Concept;
   skos:prefLabel "Overall Equipment Effectiveness"@en;
   skos:definition "A measure of the effectiveness of the equipment compared to its full potential (OEE = Availability * Performance * Quality)"@en;
   skos:notation "OEE"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_operating_time a skos:Concept;
   skos:prefLabel "Mean Operating Time"@en;
   skos:definition "The average time spent operating (Average of Operating Time)"@en;
   skos:notation "MOT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
-
-<https://zero.nexus/bev-data-vocabulary/> skos:hasTopConcept bev:mean_down_time, bev:calendar_time,
-    bev:scheduled_time, bev:unscheduled_time, bev:down_time, bev:available_time, bev:standby_time,
-    bev:operating_standby_time, bev:external_standby_time, bev:operating_time, bev:operating_delay,
-    bev:working_time, bev:non-productive_time, bev:productive_time, bev:up_time, bev:availability,
-    bev:physical_availability, bev:mechanical_availability, bev:use_of_availability, bev:asset_utilization,
-    bev:operating_utilization, bev:effective_utilization, bev:operating_efficiency, bev:production_effectiveness,
-    bev:overall_equipment_effectiveness, bev:mean_operating_time .
-
-bev:mean_down_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:calendar_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:scheduled_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:unscheduled_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:down_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:available_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:standby_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:operating_standby_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:external_standby_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:operating_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:operating_delay skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:working_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:non-productive_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:productive_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:up_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:availability skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:physical_availability skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:mechanical_availability skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:use_of_availability skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:asset_utilization skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:operating_utilization skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:effective_utilization skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:operating_efficiency skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:production_effectiveness skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:overall_equipment_effectiveness skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:mean_operating_time skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
