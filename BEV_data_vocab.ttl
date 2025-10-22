@@ -23,42 +23,14 @@
 <https://zero.nexus/bev-data-vocabulary/> a skos:ConceptScheme;
   dct:title "BEV Data"@en;
   dct:description "Description of BEV and BEV support equipment data types"@en;
-  skos:hasTopConcept bev:vehicle_id, bev:battery_id, bev:fleet_id, bev:model_year, bev:initial_service_year,
-    bev:rebuild_count, bev:last_rebuild_year, bev:model_name, bev:manufacturer, bev:functional_location,
-    bev:energy_system_architecture, bev:vehicle_type, bev:vehicle_class, bev:vehicle_function,
-    bev:curb_weight, bev:gross_vehicle_weight, bev:purchase_cost, bev:nominal_range, bev:nominal_efficiency,
-    bev:peak_power, bev:peak_torque, bev:auxiliary_powered_heater, bev:max_charge_rate,
-    bev:charge_connector, bev:measurement_start, bev:measurement_end, bev:vehicle_hours,
-    bev:total_distance, bev:vehicle_idling_time, bev:driving_time, bev:total_run_time,
-    bev:queue_time, bev:battery_swapping_time, bev:start_location, bev:end_location, bev:location,
-    bev:average_speed, bev:speed, bev:acceleration, bev:number_of_charging_sessions, bev:average_ambient_temperature,
-    bev:initial_odometer, bev:final_odometer, bev:traction_energy, bev:hydraulic_system_energy,
-    bev:hydraulic_system_power, bev:hv_accessories_energy, bev:lv_accessories_energy,
-    bev:payload, bev:inclination, bev:alert_id, bev:alert_type, bev:alert_description,
-    bev:alert_date_time, bev:alert_status, bev:pack_id, bev:module_id, bev:cell_id, bev:battery_chemistry,
-    bev:number_of_cells, bev:number_of_modules, bev:number_of_packs, bev:rated_energy,
-    bev:model, bev:battery_mass, bev:initial_soc, bev:final_soc, bev:soc, bev:soc_used,
-    bev:energy_consumption, bev:regen_energy_generation, bev:net_energy_consumption, bev:average_battery_voltage,
-    bev:average_battery_current, bev:battery_voltage, bev:battery_power, bev:battery_current,
-    bev:battery_temperature, bev:soh, bev:charger_id, bev:connector_id, bev:max_power,
-    bev:rated_power, bev:charger_location, bev:charge_start_time, bev:charge_end_time,
-    bev:charging_time, bev:charging_power, bev:charging_rate, bev:total_energy_delivered,
-    bev:work_order_id, bev:work_order_description, bev:work_order_status, bev:technician_name,
-    bev:work_order_type, bev:priority, bev:work_center, bev:work_order_start, bev:work_order_end,
-    bev:total_costs, bev:part_costs, bev:labour_costs, bev:time_in_workshop, bev:logistic_delay,
-    bev:time_to_repair, bev:idle_time, bev:mean_time_to_repair, bev:mean_time_between_failures,
-    bev:mean_time_between_maintenance, bev:mean_down_time, bev:calendar_time, bev:scheduled_time,
-    bev:unscheduled_time, bev:down_time, bev:available_time, bev:standby_time, bev:operating_standby_time,
-    bev:external_standby_time, bev:operating_time, bev:operating_delay, bev:working_time,
-    bev:non-productive_time, bev:productive_time, bev:up_time, bev:availability, bev:physical_availability,
-    bev:mechanical_availability, bev:use_of_availability, bev:asset_utilization, bev:operating_utilization,
-    bev:effective_utilization, bev:operating_efficiency, bev:production_effectiveness,
-    bev:overall_equipment_effectiveness, bev:mean_operating_time .
+  skos:hasTopConcept bev:vehicle_data, bev:battery_data, bev:charger_data, bev:facility_data,
+    bev:maintenance_data, bev:production_data, bev:availability_kpis, bev:utilization_kpis,
+    bev:effectiveness_kpis, bev:maintenance_kpis .
 
-bev:vehicle_data a skos:Collection;
+bev:vehicle_data a skos:Concept;
   skos:prefLabel "Vehicle Data"@en;
   skos:definition "All data relating to the description and use of a battery electric vehicle (BEV)"@en;
-  skos:member bev:vehicle_id, bev:battery_id, bev:fleet_id, bev:model_year, bev:initial_service_year,
+  skos:narrower bev:vehicle_id, bev:battery_id, bev:fleet_id, bev:model_year, bev:initial_service_year,
     bev:rebuild_count, bev:last_rebuild_year, bev:model_name, bev:manufacturer, bev:functional_location,
     bev:energy_system_architecture, bev:vehicle_type, bev:vehicle_class, bev:vehicle_function,
     bev:curb_weight, bev:gross_vehicle_weight, bev:purchase_cost, bev:nominal_range, bev:nominal_efficiency,
@@ -71,12 +43,13 @@ bev:vehicle_data a skos:Collection;
     bev:hydraulic_system_power, bev:hv_accessories_energy, bev:lv_accessories_energy,
     bev:payload, bev:inclination, bev:alert_id, bev:alert_type, bev:alert_description,
     bev:alert_date_time, bev:alert_status;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:battery_data a skos:Collection;
+bev:battery_data a skos:Concept;
   skos:prefLabel "Battery Data"@en;
   skos:definition "All data relating to the description and use of a BEV battery"@en;
-  skos:member bev:battery_id, bev:model_year, bev:initial_service_year, bev:model_name,
+  skos:narrower bev:battery_id, bev:model_year, bev:initial_service_year, bev:model_name,
     bev:manufacturer, bev:functional_location, bev:purchase_cost, bev:measurement_start,
     bev:measurement_end, bev:alert_id, bev:alert_type, bev:alert_description, bev:alert_date_time,
     bev:alert_status, bev:pack_id, bev:module_id, bev:cell_id, bev:battery_chemistry,
@@ -85,899 +58,908 @@ bev:battery_data a skos:Collection;
     bev:energy_consumption, bev:regen_energy_generation, bev:net_energy_consumption, bev:average_battery_voltage,
     bev:average_battery_current, bev:battery_voltage, bev:battery_power, bev:battery_current,
     bev:battery_temperature, bev:soh;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:charger_data a skos:Collection;
+bev:charger_data a skos:Concept;
   skos:prefLabel "Charger Data"@en;
   skos:definition "All data relating to the description and use of a BEV charger and support equipment"@en;
-  skos:member bev:model_year, bev:initial_service_year, bev:model_name, bev:manufacturer,
+  skos:narrower bev:model_year, bev:initial_service_year, bev:model_name, bev:manufacturer,
     bev:functional_location, bev:purchase_cost, bev:measurement_start, bev:measurement_end,
     bev:alert_id, bev:alert_type, bev:alert_description, bev:alert_date_time, bev:alert_status,
     bev:charger_id, bev:connector_id, bev:max_power, bev:rated_power, bev:charger_location,
     bev:charge_start_time, bev:charge_end_time, bev:charging_time, bev:charging_power,
     bev:charging_rate, bev:total_energy_delivered;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:facility_data a skos:Collection;
+bev:facility_data a skos:Concept;
   skos:prefLabel "Facility Data"@en;
   skos:definition "All data relating to the description and use of a BEV charging or maintenance facility"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:maintenance_data a skos:Collection;
+bev:maintenance_data a skos:Concept;
   skos:prefLabel "Maintenance Data"@en;
   skos:definition "All data relating to BEV maintenance activities"@en;
-  skos:member bev:work_order_id, bev:work_order_description, bev:work_order_status,
+  skos:narrower bev:work_order_id, bev:work_order_description, bev:work_order_status,
     bev:technician_name, bev:work_order_type, bev:priority, bev:work_center, bev:work_order_start,
     bev:work_order_end, bev:total_costs, bev:part_costs, bev:labour_costs, bev:time_in_workshop,
     bev:logistic_delay, bev:time_to_repair, bev:idle_time, bev:mean_time_to_repair, bev:mean_time_between_failures,
     bev:mean_time_between_maintenance, bev:mean_down_time;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:production_data a skos:Collection;
+bev:production_data a skos:Concept;
   skos:prefLabel "Production Data"@en;
   skos:definition "All data relating to BEV production"@en;
-  skos:member bev:calendar_time, bev:scheduled_time, bev:unscheduled_time, bev:down_time,
+  skos:narrower bev:calendar_time, bev:scheduled_time, bev:unscheduled_time, bev:down_time,
     bev:available_time, bev:standby_time, bev:operating_standby_time, bev:external_standby_time,
     bev:operating_time, bev:operating_delay, bev:working_time, bev:non-productive_time,
     bev:productive_time, bev:up_time, bev:availability, bev:physical_availability, bev:mechanical_availability,
     bev:use_of_availability, bev:asset_utilization, bev:operating_utilization, bev:effective_utilization,
     bev:operating_efficiency, bev:production_effectiveness, bev:overall_equipment_effectiveness,
     bev:mean_operating_time;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:availability_kpis a skos:Collection;
+bev:availability_kpis a skos:Concept;
   skos:prefLabel "Availability KPIs"@en;
   skos:definition "Key Performance Indicators (KPIs) relating to equipment availability"@en;
-  skos:member bev:up_time, bev:availability, bev:physical_availability, bev:mechanical_availability;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:narrower bev:up_time, bev:availability, bev:physical_availability, bev:mechanical_availability;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:utilization_kpis a skos:Collection;
+bev:utilization_kpis a skos:Concept;
   skos:prefLabel "Utilization KPIs"@en;
   skos:definition "Key Performance Indicators (KPIs) relating to equipment utilization"@en;
-  skos:member bev:use_of_availability, bev:asset_utilization, bev:operating_utilization,
+  skos:narrower bev:use_of_availability, bev:asset_utilization, bev:operating_utilization,
     bev:effective_utilization;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:effectiveness_kpis a skos:Collection;
+bev:effectiveness_kpis a skos:Concept;
   skos:prefLabel "Effectiveness KPIs"@en;
   skos:definition "Key Performance Indicators (KPIs) relating to equipment effectiveness"@en;
-  skos:member bev:operating_efficiency, bev:production_effectiveness, bev:overall_equipment_effectiveness;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:narrower bev:operating_efficiency, bev:production_effectiveness, bev:overall_equipment_effectiveness;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-bev:maintenance_kpis a skos:Collection;
+bev:maintenance_kpis a skos:Concept;
   skos:prefLabel "Maintenance KPIs"@en;
   skos:definition "Key Performance Indicators (KPIs) relating to equipment maintenance"@en;
-  skos:member bev:mean_time_to_repair, bev:mean_time_between_failures, bev:mean_time_between_maintenance,
+  skos:narrower bev:mean_time_to_repair, bev:mean_time_between_failures, bev:mean_time_between_maintenance,
     bev:mean_down_time;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
+  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_id a skos:Concept;
   skos:prefLabel "Vehicle ID"@en;
   skos:definition "The ID number for the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_id a skos:Concept;
   skos:prefLabel "Battery ID"@en;
   skos:definition "The ID number for the battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:fleet_id a skos:Concept;
   skos:prefLabel "Fleet ID"@en;
   skos:definition "The ID number for the fleet"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:model_year a skos:Concept;
   skos:prefLabel "Model Year"@en;
   skos:definition "Year manufactured"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:initial_service_year a skos:Concept;
   skos:prefLabel "Initial Service Year"@en;
   skos:definition "Starting year of operations"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:rebuild_count a skos:Concept;
   skos:prefLabel "Rebuild Count"@en;
   skos:definition "Number of times vehicle has been rebuilt"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:last_rebuild_year a skos:Concept;
   skos:prefLabel "Last Rebuild Year"@en;
   skos:definition "Year of last rebuild"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:model_name a skos:Concept;
   skos:prefLabel "Model Name"@en;
   skos:definition "Vehicle model name/model number"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:manufacturer a skos:Concept;
   skos:prefLabel "Manufacturer"@en;
   skos:definition "Equipment manufacturer"@en, "Battery manufacturer"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:functional_location a skos:Concept;
   skos:prefLabel "Functional Location"@en;
   skos:definition "Assigned functional location (code-named region) within the mine"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:energy_system_architecture a skos:Concept;
   skos:prefLabel "Energy System Architecture"@en;
   skos:definition "Type of vehicle powertrain"@en;
   skos:example "BEV (battery electric vehicle), PHEV (plug-in hybrid electric vehicle, HEV (hydrogen electric vehicle)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_type a skos:Concept;
   skos:prefLabel "Vehicle Type"@en;
   skos:definition "Class of mining vehicle"@en;
   skos:example "LHD, haul truck, drill rig, utility vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_class a skos:Concept;
   skos:prefLabel "Vehicle Class"@en;
   skos:definition "Sub-class of mining vehicle"@en;
   skos:example "Narrow vein LHD, bolter, shotcrete sprayer"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_function a skos:Concept;
   skos:prefLabel "Vehicle Function"@en;
   skos:definition "Core function vehicle is used for"@en;
   skos:example "Hauling, loading, drilling, personnel transport, logistics"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:curb_weight a skos:Concept;
   skos:prefLabel "Curb Weight"@en;
   skos:definition "Total mass of the vehicle with all equipment and consumables"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:gross_vehicle_weight a skos:Concept;
   skos:prefLabel "Gross Vehicle Weight"@en;
   skos:definition "Maximum operating mass of the vehicle including all equipment and payload"@en;
+  skos:broader bev:vehicle_data;
   skos:notation "GVW"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:purchase_cost a skos:Concept;
   skos:prefLabel "Purchase Cost"@en;
   skos:definition "Purchase cost of the equipment"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:nominal_range a skos:Concept;
   skos:prefLabel "Nominal Range"@en;
   skos:definition "Manufacturer-provided indicative driving range"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:nominal_efficiency a skos:Concept;
   skos:prefLabel "Nominal Efficiency"@en;
   skos:definition "Manufacturer-provided indicative powertrain energy efficiency"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:peak_power a skos:Concept;
   skos:prefLabel "Peak Power"@en;
   skos:definition "Peak power output of the traction motor(s)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:peak_torque a skos:Concept;
   skos:prefLabel "Peak Torque"@en;
   skos:definition "Peak torque of the traction motor(s)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:auxiliary_powered_heater a skos:Concept;
   skos:prefLabel "Auxiliary Powered Heater"@en;
   skos:definition "Auxiliary powered heating system on the vehicle?"@en;
   skos:example "Yes/No"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:max_charge_rate a skos:Concept;
   skos:prefLabel "Max Charge Rate"@en;
   skos:definition "Maximum charging rate of the battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charge_connector a skos:Concept;
   skos:prefLabel "Charge Connector"@en;
   skos:definition "Type of charging connector"@en;
   skos:example "CCS Combo Type 1, CCS Combo Type 2, CHAdeMO"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:measurement_start a skos:Concept;
   skos:prefLabel "Measurement Start"@en;
   skos:definition "Starting date/time of data collection period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:measurement_end a skos:Concept;
   skos:prefLabel "Measurement End"@en;
   skos:definition "End date/time of data collection period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_hours a skos:Concept;
   skos:prefLabel "Vehicle Hours"@en;
   skos:definition "Total operational hours on the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:total_distance a skos:Concept;
   skos:prefLabel "Total Distance"@en;
   skos:definition "Total distance travelled in the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:vehicle_idling_time a skos:Concept;
   skos:prefLabel "Vehicle Idling Time"@en;
   skos:definition "Time spent idling by the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:driving_time a skos:Concept;
   skos:prefLabel "Driving Time"@en;
   skos:definition "Time spent driving by the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:total_run_time a skos:Concept;
   skos:prefLabel "Total Run Time"@en;
   skos:definition "Total operating time for the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:queue_time a skos:Concept;
   skos:prefLabel "Queue Time"@en;
   skos:definition "Time spent queueing by the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_swapping_time a skos:Concept;
   skos:prefLabel "Battery Swapping Time"@en;
   skos:definition "Time spent swapping the battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:start_location a skos:Concept;
   skos:prefLabel "Start Location"@en;
   skos:definition "Location at start of measurement period (latitude, longitude, elevation)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:end_location a skos:Concept;
   skos:prefLabel "End Location"@en;
   skos:definition "Location at end of measurement period (latitude, longitude, elevation)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:location a skos:Concept;
   skos:prefLabel "Location"@en;
   skos:definition "Instantaneous location of vehicle (latitude, longitude, elevation)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:average_speed a skos:Concept;
   skos:prefLabel "Average Speed"@en;
   skos:definition "Average speed for the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:speed a skos:Concept;
   skos:prefLabel "Speed"@en;
   skos:definition "Speed of the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:acceleration a skos:Concept;
   skos:prefLabel "Acceleration"@en;
   skos:definition "Acceleration of the vehicle"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:number_of_charging_sessions a skos:Concept;
   skos:prefLabel "Number of Charging Sessions"@en;
   skos:definition "Number of charging sessions in the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:average_ambient_temperature a skos:Concept;
   skos:prefLabel "Average Ambient Temperature"@en;
   skos:definition "Average ambient temperature for the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:initial_odometer a skos:Concept;
   skos:prefLabel "Initial Odometer"@en;
   skos:definition "Odometer reading at the start of the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:final_odometer a skos:Concept;
   skos:prefLabel "Final Odometer"@en;
   skos:definition "Odometer reading at the end of the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:traction_energy a skos:Concept;
   skos:prefLabel "Traction Energy"@en;
   skos:definition "Energy used by the traction system"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:hydraulic_system_energy a skos:Concept;
   skos:prefLabel "Hydraulic System Energy"@en;
   skos:definition "Energy used by the hydraulic system"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:hydraulic_system_power a skos:Concept;
   skos:prefLabel "Hydraulic System Power"@en;
   skos:definition "Power output of the hydraulic system"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:hv_accessories_energy a skos:Concept;
   skos:prefLabel "HV Accessories Energy"@en;
   skos:definition "Energy used by any high voltage system components"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:lv_accessories_energy a skos:Concept;
   skos:prefLabel "LV Accessories Energy"@en;
   skos:definition "Energy used by any low voltage system components"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:payload a skos:Concept;
   skos:prefLabel "Payload"@en;
   skos:definition "Vehicle payload"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:inclination a skos:Concept;
   skos:prefLabel "Inclination"@en;
   skos:definition "Inclination of the vehicle, used to determine road grade"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:alert_id a skos:Concept;
   skos:prefLabel "Alert ID"@en;
   skos:definition "Vehicle errors and alert codes"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:alert_type a skos:Concept;
   skos:prefLabel "Alert Type"@en;
   skos:definition "Type of vehicle error/alert"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:alert_description a skos:Concept;
   skos:prefLabel "Alert Description"@en;
   skos:definition "Description of vehicle error/alert"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:alert_date_time a skos:Concept;
   skos:prefLabel "Alert Date Time"@en;
   skos:definition "Date/time of vehicle error/alert"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:alert_status a skos:Concept;
   skos:prefLabel "Alert Status"@en;
   skos:definition "Current status of vehicle error/alert"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:vehicle_data, bev:battery_data, bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:pack_id a skos:Concept;
   skos:prefLabel "Pack ID"@en;
   skos:definition "The ID number for the pack (or sub-pack)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:module_id a skos:Concept;
   skos:prefLabel "Module ID"@en;
   skos:definition "The ID number for the module"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:cell_id a skos:Concept;
   skos:prefLabel "Cell ID"@en;
   skos:definition "The ID number for the cell"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_chemistry a skos:Concept;
   skos:prefLabel "Battery Chemistry"@en;
   skos:definition "Battery cell chemistry"@en;
   skos:example "LFP, NCM, NCA, LTO, etc."@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:number_of_cells a skos:Concept;
   skos:prefLabel "Number of Cells"@en;
   skos:definition "Number of cells in battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:number_of_modules a skos:Concept;
   skos:prefLabel "Number of Modules"@en;
   skos:definition "Number of modules in battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:number_of_packs a skos:Concept;
   skos:prefLabel "Number of Packs"@en;
   skos:definition "Number of packs (or sub-packs) in battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:rated_energy a skos:Concept;
   skos:prefLabel "Rated Energy"@en;
   skos:definition "Rated energy capacity of the battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:model a skos:Concept;
   skos:prefLabel "Model"@en;
   skos:definition "Battery model name/number"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_mass a skos:Concept;
   skos:prefLabel "Battery Mass"@en;
   skos:definition "The mass of the battery"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:initial_soc a skos:Concept;
   skos:prefLabel "Initial SOC"@en;
   skos:definition "State of Charge (SOC) at the start of the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:final_soc a skos:Concept;
   skos:prefLabel "Final SOC"@en;
   skos:definition "State of Charge (SOC) at the end of the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:soc a skos:Concept;
   skos:prefLabel "SOC"@en;
   skos:definition "Battery State of Charge (SOC) reading"@en;
+  skos:broader bev:battery_data;
   skos:notation "SOC"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:soc_used a skos:Concept;
   skos:prefLabel "SOC Used"@en;
   skos:definition "State of Charge (SOC) used during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:energy_consumption a skos:Concept;
   skos:prefLabel "Energy Consumption"@en;
   skos:definition "Energy delivered by battery to the powertrain during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:regen_energy_generation a skos:Concept;
   skos:prefLabel "Regen Energy Generation"@en;
   skos:definition "Energy regenerated to the battery during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:net_energy_consumption a skos:Concept;
   skos:prefLabel "Net Energy Consumption"@en;
   skos:definition "Net energy consumed during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:average_battery_voltage a skos:Concept;
   skos:prefLabel "Average Battery Voltage"@en;
   skos:definition "Average battery voltage during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:average_battery_current a skos:Concept;
   skos:prefLabel "Average Battery Current"@en;
   skos:definition "Average battery current during the measurement period"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_voltage a skos:Concept;
   skos:prefLabel "Battery Voltage"@en;
   skos:definition "Battery voltage reading"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_power a skos:Concept;
   skos:prefLabel "Battery Power"@en;
   skos:definition "Battery power reading"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_current a skos:Concept;
   skos:prefLabel "Battery Current"@en;
   skos:definition "Battery current reading"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_temperature a skos:Concept;
   skos:prefLabel "Battery Temperature"@en;
   skos:definition "Battery temperature reading"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:battery_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:soh a skos:Concept;
   skos:prefLabel "SOH"@en;
   skos:definition "Battery State of Health (SOH) reading"@en;
+  skos:broader bev:battery_data;
   skos:notation "SOH"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charger_id a skos:Concept;
   skos:prefLabel "Charger ID"@en;
   skos:definition "The ID number for the charger"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:connector_id a skos:Concept;
   skos:prefLabel "Connector ID"@en;
   skos:definition "The ID number for the connector"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:max_power a skos:Concept;
   skos:prefLabel "Max Power"@en;
   skos:definition "The maximum power deliverable by the charger"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:rated_power a skos:Concept;
   skos:prefLabel "Rated Power"@en;
   skos:definition "The rated power for the charger"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charger_location a skos:Concept;
   skos:prefLabel "Charger Location"@en;
   skos:definition "Location of the charger (latitute/longitude/elevation or location ID)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charge_start_time a skos:Concept;
   skos:prefLabel "Charge Start Time"@en;
   skos:definition "The start date/time of a charging session"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charge_end_time a skos:Concept;
   skos:prefLabel "Charge End Time"@en;
   skos:definition "The end date/time of a charging session"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charging_time a skos:Concept;
   skos:prefLabel "Charging Time"@en;
   skos:definition "The duration of a charging session"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charging_power a skos:Concept;
   skos:prefLabel "Charging Power"@en;
   skos:definition "Charger power reading"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:charging_rate a skos:Concept;
   skos:prefLabel "Charging Rate"@en;
   skos:definition "The charging rate (or C-Rate)"@en;
   skos:example "0.5C, 1C, 2C, 5C"@en;
+  skos:broader bev:charger_data;
   skos:notation "C-Rate"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:total_energy_delivered a skos:Concept;
   skos:prefLabel "Total Energy Delivered"@en;
   skos:definition "The energy delivered by the charger over a charging session"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:charger_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_id a skos:Concept;
   skos:prefLabel "Work Order ID"@en;
   skos:definition "The ID number for the maintenance work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_description a skos:Concept;
   skos:prefLabel "Work Order Description"@en;
   skos:definition "A description of the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_status a skos:Concept;
   skos:prefLabel "Work Order Status"@en;
   skos:definition "The status of the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:technician_name a skos:Concept;
   skos:prefLabel "Technician Name"@en;
   skos:definition "Name of the technician responsible for the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_type a skos:Concept;
   skos:prefLabel "Work Order Type"@en;
   skos:definition "Type of work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:priority a skos:Concept;
   skos:prefLabel "Priority"@en;
   skos:definition "Priority level for the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_center a skos:Concept;
   skos:prefLabel "Work Center"@en;
   skos:definition "Work Center the work order is assigned to"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_start a skos:Concept;
   skos:prefLabel "Work Order Start"@en;
   skos:definition "Start date/time for the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:work_order_end a skos:Concept;
   skos:prefLabel "Work Order End"@en;
   skos:definition "End data/time for the work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:total_costs a skos:Concept;
   skos:prefLabel "Total Costs"@en;
   skos:definition "Total cost of work order"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:part_costs a skos:Concept;
   skos:prefLabel "Part Costs"@en;
   skos:definition "Part replacement costs"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:labour_costs a skos:Concept;
   skos:prefLabel "Labour Costs"@en;
   skos:definition "Labour costs"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:time_in_workshop a skos:Concept;
   skos:prefLabel "Time in Workshop"@en;
   skos:definition "Time spent in workshop"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:logistic_delay a skos:Concept;
   skos:prefLabel "Logistic Delay"@en;
   skos:definition "Time spent in workshop delayed for logistical reasons"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:time_to_repair a skos:Concept;
   skos:prefLabel "Time To Repair"@en;
   skos:definition "Time to repair"@en;
+  skos:broader bev:maintenance_data;
   skos:notation "TTR"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:idle_time a skos:Concept;
   skos:prefLabel "Idle Time"@en;
   skos:definition "Idle time waiting for repair"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:maintenance_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_time_to_repair a skos:Concept;
   skos:prefLabel "Mean Time To Repair"@en;
   skos:definition "Mean time to repair"@en;
+  skos:broader bev:maintenance_data, bev:maintenance_kpis;
   skos:notation "MTTR"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_time_between_failures a skos:Concept;
   skos:prefLabel "Mean Time Between Failures"@en;
   skos:definition "Mean time between failures"@en;
+  skos:broader bev:maintenance_data, bev:maintenance_kpis;
   skos:notation "MTBF"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_time_between_maintenance a skos:Concept;
   skos:prefLabel "Mean Time Between Maintenance"@en;
   skos:definition "Mean time between maintenance"@en;
+  skos:broader bev:maintenance_data, bev:maintenance_kpis;
   skos:notation "MTBM"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_down_time a skos:Concept;
   skos:prefLabel "Mean Down Time"@en;
   skos:definition "Mean down time"@en;
+  skos:broader bev:maintenance_data, bev:maintenance_kpis;
   skos:notation "MDT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:calendar_time a skos:Concept;
   skos:prefLabel "Calendar Time"@en;
   skos:definition "Total time available"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:scheduled_time a skos:Concept;
   skos:prefLabel "Scheduled Time"@en;
   skos:definition "Time spent assigned to a task (scheduled time = calendar time - unscheduled time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:unscheduled_time a skos:Concept;
   skos:prefLabel "Unscheduled Time"@en;
   skos:definition "Time spent unassigned to any tasks"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:down_time a skos:Concept;
   skos:prefLabel "Down Time"@en;
   skos:definition "Time equipment is unavailable to perform its intended tasks"@en;
+  skos:broader bev:production_data;
   skos:notation "DT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:available_time a skos:Concept;
   skos:prefLabel "Available Time"@en;
   skos:definition "Time equipment is available to perform its intended tasks (available time = scheduled time - down time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:standby_time a skos:Concept;
   skos:prefLabel "Standby Time"@en;
   skos:definition "Time equipment is available but not operating (standby time = operating standby time + external standby time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_standby_time a skos:Concept;
   skos:prefLabel "Operating Standby Time"@en;
   skos:definition "Time spent on standby for reasons within management control"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:external_standby_time a skos:Concept;
   skos:prefLabel "External Standby Time"@en;
   skos:definition "Time spent on standby for reasons outside of management control"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_time a skos:Concept;
   skos:prefLabel "Operating Time"@en;
   skos:definition "Time equipment is available and operating (operating time = available time - standby time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_delay a skos:Concept;
   skos:prefLabel "Operating Delay"@en;
   skos:definition "Time equipment is operating but temporarily stalled due to delays/working environment conditions"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:working_time a skos:Concept;
   skos:prefLabel "Working Time"@en;
   skos:definition "Time equipment is operating as intended, carrying out both productive and non-productive tasks (working time = operating time - operating delay)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:non-productive_time a skos:Concept;
   skos:prefLabel "Non-Productive Time"@en;
   skos:definition "Time spent on required tasks that do not directly contribute to production"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:productive_time a skos:Concept;
   skos:prefLabel "Productive Time"@en;
   skos:definition "Time spent carrying out tasks that directly contribute to production (productive time = working time - non-productive time)"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:up_time a skos:Concept;
   skos:prefLabel "Up Time"@en;
   skos:definition "The time equipment is capable of operating (Uptime = Available Time / Calendar Time)"@en;
+  skos:broader bev:production_data, bev:availability_kpis;
   skos:notation "UT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:availability a skos:Concept;
   skos:prefLabel "Availability"@en;
   skos:definition "Time equipment is available outside of scheduled and unscheduled downtime (Availability = MTBM / (MTBM + MDT))"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:availability_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:physical_availability a skos:Concept;
   skos:prefLabel "Physical Availability"@en;
   skos:definition "The percentage of time equipment is available to perform its intended function over a defined period when it is required by the operation"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:availability_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mechanical_availability a skos:Concept;
   skos:prefLabel "Mechanical Availability"@en;
   skos:definition "The time the equipment is available as a percentage of the time it is required by the operation"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:availability_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:use_of_availability a skos:Concept;
   skos:prefLabel "Use of Availability"@en;
   skos:definition "The time the equipment is operated as a percentage of the available time"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:utilization_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:asset_utilization a skos:Concept;
   skos:prefLabel "Asset Utilization"@en;
   skos:definition "The time the equipment is being operated as a percentage of the total time available"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:utilization_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_utilization a skos:Concept;
   skos:prefLabel "Operating Utilization"@en;
   skos:definition "The percentage of time the asset is being operated when it is scheduled to operate"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:utilization_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:effective_utilization a skos:Concept;
   skos:prefLabel "Effective Utilization"@en;
   skos:definition "The time the equipment is used to perform its intended function as a percentage of the time that it is scheduled to work"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:utilization_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:operating_efficiency a skos:Concept;
   skos:prefLabel "Operating Efficiency"@en;
   skos:definition "The time the equipment is performing its intended function asa percentage of the time that it is operating"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:effectiveness_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:production_effectiveness a skos:Concept;
   skos:prefLabel "Production Effectiveness"@en;
   skos:definition "The time the equipment is directly contributing to production as a percentage of the time that it is operating"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:broader bev:production_data, bev:effectiveness_kpis;
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:overall_equipment_effectiveness a skos:Concept;
   skos:prefLabel "Overall Equipment Effectiveness"@en;
   skos:definition "A measure of the effectiveness of the equipment compared to its full potential (OEE = Availability * Performance * Quality)"@en;
+  skos:broader bev:production_data, bev:effectiveness_kpis;
   skos:notation "OEE"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:mean_operating_time a skos:Concept;
   skos:prefLabel "Mean Operating Time"@en;
   skos:definition "The average time spent operating (Average of Operating Time)"@en;
+  skos:broader bev:production_data;
   skos:notation "MOT"@en;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
-  skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
+  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
