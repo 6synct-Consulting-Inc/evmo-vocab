@@ -28,20 +28,20 @@
     bev:energy_system_architecture, bev:vehicle_type, bev:vehicle_class, bev:vehicle_function,
     bev:curb_weight, bev:gross_vehicle_weight, bev:purchase_cost, bev:nominal_range, bev:nominal_efficiency,
     bev:peak_power, bev:peak_torque, bev:auxiliary_powered_heater, bev:max_charge_rate,
-    <https://zero.nexus/bev-data-vocabulary/charge connector>, bev:measurement_start,
-    bev:measurement_end, bev:vehicle_hours, bev:total_distance, bev:vehicle_idling_time,
-    bev:driving_time, bev:total_run_time, bev:queue_time, bev:battery_swapping_time, bev:start_location,
-    bev:end_location, bev:location, bev:average_speed, bev:speed, bev:acceleration, bev:number_of_charging_sessions,
-    bev:average_ambient_temperature, bev:initial_odometer, bev:final_odometer, bev:traction_energy,
-    bev:hydraulic_system_energy, bev:hydraulic_system_power, bev:hv_accessories_energy,
-    bev:lv_accessories_energy, bev:payload, bev:inclination, bev:alert_id, bev:alert_type,
-    bev:alert_description, bev:alert_date_time, bev:alert_status, bev:pack_id, bev:module_id,
-    bev:cell_id, bev:battery_chemistry, bev:number_of_cells, bev:number_of_modules, bev:number_of_packs,
-    bev:rated_energy, bev:model, bev:battery_mass, bev:initial_soc, bev:final_soc, bev:soc,
-    bev:soc_used, bev:energy_consumption, bev:regen_energy_generation, bev:net_energy_consumption,
-    bev:average_battery_voltage, bev:average_battery_current, bev:battery_voltage, bev:battery_power,
-    bev:battery_current, bev:battery_temperature, bev:soh, bev:charger_id, bev:connector_id,
-    bev:max_power, bev:rated_power, bev:charger_location, bev:charge_start_time, bev:charge_end_time,
+    bev:charge_connector, bev:measurement_start, bev:measurement_end, bev:vehicle_hours,
+    bev:total_distance, bev:vehicle_idling_time, bev:driving_time, bev:total_run_time,
+    bev:queue_time, bev:battery_swapping_time, bev:start_location, bev:end_location, bev:location,
+    bev:average_speed, bev:speed, bev:acceleration, bev:number_of_charging_sessions, bev:average_ambient_temperature,
+    bev:initial_odometer, bev:final_odometer, bev:traction_energy, bev:hydraulic_system_energy,
+    bev:hydraulic_system_power, bev:hv_accessories_energy, bev:lv_accessories_energy,
+    bev:payload, bev:inclination, bev:alert_id, bev:alert_type, bev:alert_description,
+    bev:alert_date_time, bev:alert_status, bev:pack_id, bev:module_id, bev:cell_id, bev:battery_chemistry,
+    bev:number_of_cells, bev:number_of_modules, bev:number_of_packs, bev:rated_energy,
+    bev:model, bev:battery_mass, bev:initial_soc, bev:final_soc, bev:soc, bev:soc_used,
+    bev:energy_consumption, bev:regen_energy_generation, bev:net_energy_consumption, bev:average_battery_voltage,
+    bev:average_battery_current, bev:battery_voltage, bev:battery_power, bev:battery_current,
+    bev:battery_temperature, bev:soh, bev:charger_id, bev:connector_id, bev:max_power,
+    bev:rated_power, bev:charger_location, bev:charge_start_time, bev:charge_end_time,
     bev:charging_time, bev:charging_power, bev:charging_rate, bev:total_energy_delivered,
     bev:work_order_id, bev:work_order_description, bev:work_order_status, bev:technician_name,
     bev:work_order_type, bev:priority, bev:work_center, bev:work_order_start, bev:work_order_end,
@@ -57,14 +57,14 @@ bev:vehicle_data a skos:Collection;
     bev:energy_system_architecture, bev:vehicle_type, bev:vehicle_class, bev:vehicle_function,
     bev:curb_weight, bev:gross_vehicle_weight, bev:purchase_cost, bev:nominal_range, bev:nominal_efficiency,
     bev:peak_power, bev:peak_torque, bev:auxiliary_powered_heater, bev:max_charge_rate,
-    <https://zero.nexus/bev-data-vocabulary/charge connector>, bev:measurement_start,
-    bev:measurement_end, bev:vehicle_hours, bev:total_distance, bev:vehicle_idling_time,
-    bev:driving_time, bev:total_run_time, bev:queue_time, bev:battery_swapping_time, bev:start_location,
-    bev:end_location, bev:location, bev:average_speed, bev:speed, bev:acceleration, bev:number_of_charging_sessions,
-    bev:average_ambient_temperature, bev:initial_odometer, bev:final_odometer, bev:traction_energy,
-    bev:hydraulic_system_energy, bev:hydraulic_system_power, bev:hv_accessories_energy,
-    bev:lv_accessories_energy, bev:payload, bev:inclination, bev:alert_id, bev:alert_type,
-    bev:alert_description, bev:alert_date_time, bev:alert_status;
+    bev:charge_connector, bev:measurement_start, bev:measurement_end, bev:vehicle_hours,
+    bev:total_distance, bev:vehicle_idling_time, bev:driving_time, bev:total_run_time,
+    bev:queue_time, bev:battery_swapping_time, bev:start_location, bev:end_location, bev:location,
+    bev:average_speed, bev:speed, bev:acceleration, bev:number_of_charging_sessions, bev:average_ambient_temperature,
+    bev:initial_odometer, bev:final_odometer, bev:traction_energy, bev:hydraulic_system_energy,
+    bev:hydraulic_system_power, bev:hv_accessories_energy, bev:lv_accessories_energy,
+    bev:payload, bev:inclination, bev:alert_id, bev:alert_type, bev:alert_description,
+    bev:alert_date_time, bev:alert_status;
   skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
 bev:battery_data a skos:Collection;
@@ -289,7 +289,7 @@ bev:max_charge_rate a skos:Concept;
   skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
   skos:topConceptOf <https://zero.nexus/bev-data-vocabulary/> .
 
-<https://zero.nexus/bev-data-vocabulary/charge connector> a skos:Concept;
+bev:charge_connector a skos:Concept;
   skos:prefLabel "Charge Connector"@en;
   skos:definition "Type of charging connector"@en;
   skos:example "CCS Combo Type 1, CCS Combo Type 2, CHAdeMO"@en;
