@@ -1,0 +1,45 @@
+15:51:01.541  155  DEBUG fr.sparna.rdf.xls2rdf.app.Convert - Will use output format : text/turtle
+15:51:01.543  157  DEBUG fr.sparna.rdf.xls2rdf.app.Convert - Will use ModelWriter : fr.sparna.rdf.xls2rdf.write.OutputStreamModelWriter
+15:51:01.580  194  INFO  f.s.r.x.Xls2RdfConverterFactory - Setting a support repository that contains 0 triples
+15:51:01.935  549  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found prefix : bev : <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>
+15:51:01.944  558  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Processing sheet: SKOS
+15:51:01.945  559  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : https://zero.nexus/wp-content/uploads/2025/10/bev.ttl
+15:51:01.947  561  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+15:51:01.948  562  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#prefLabel
+15:51:01.949  563  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#prefLabel
+15:51:01.950  564  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#member
+15:51:01.950  564  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#definition
+15:51:01.950  564  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#scopeNote
+15:51:01.951  565  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#example
+15:51:01.951  565  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#narrower
+15:51:01.951  565  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found proper property in header : http://www.w3.org/2004/02/skos/core#broader
+15:51:01.952  566  INFO  f.sparna.rdf.xls2rdf.RdfizableSheet - Found at least 2 headers with proper property declaration in the first 10 columns, title row is at index 8
+15:51:01.952  566  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Found title row at index 8
+15:51:01.954  568  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Adding value on header object "BEV Data" with lang en
+15:51:01.956  570  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Adding value on header object "Description of BEV and BEV support equipment data types" with lang en
+15:51:01.957  571  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Converting data with these column headers: 
+15:51:01.957  571  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=URI, language=Optional.empty, datatype=Optional.empty, property=null, declaredProperty=URI, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=URI]
+15:51:01.957  571  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=rdf:type, language=Optional.empty, datatype=Optional.empty, property=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, declaredProperty=rdf:type, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=rdf:type]
+15:51:01.957  571  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:prefLabel@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#prefLabel, declaredProperty=skos:prefLabel, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:prefLabel@en]
+15:51:01.958  572  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:prefLabel@en(id="label"), language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#prefLabel, declaredProperty=skos:prefLabel, inverse=false, parameters={id=label}, id=label, reconcileOn=null, headerCell=skos:prefLabel@en(id="label")]
+15:51:01.958  572  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=^skos:member, language=Optional.empty, datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#member, declaredProperty=skos:member, inverse=true, parameters={}, id=null, reconcileOn=null, headerCell=^skos:member]
+15:51:01.959  573  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:definition@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#definition, declaredProperty=skos:definition, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:definition@en]
+15:51:01.961  575  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:scopeNote@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#scopeNote, declaredProperty=skos:scopeNote, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:scopeNote@en]
+15:51:01.962  576  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:example@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#example, declaredProperty=skos:example, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:example@en]
+15:51:01.962  576  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:narrower@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#narrower, declaredProperty=skos:narrower, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:narrower@en]
+15:51:01.963  577  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:broader@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#broader, declaredProperty=skos:broader, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:broader@en]
+15:51:01.964  578  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:notation@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#notation, declaredProperty=skos:notation, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:notation@en]
+15:51:01.964  578  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:editorialNote@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#editorialNote, declaredProperty=skos:editorialNote, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:editorialNote@en]
+15:51:01.965  579  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - ColumnHeader [originalValue=skos:changeNote@en, language=Optional[en], datatype=Optional.empty, property=http://www.w3.org/2004/02/skos/core#changeNote, declaredProperty=skos:changeNote, inverse=false, parameters={}, id=null, reconcileOn=null, headerCell=skos:changeNote@en]
+15:51:01.965  579  INFO  f.s.rdf.xls2rdf.Xls2RdfConverter - Converting rows...
+15:51:02.002  616  DEBUG f.s.r.x.p.AsListPostProcessor - Postprocessing : AsListPostProcessor
+15:51:02.003  617  INFO  f.s.rdf.xls2rdf.Xls2RdfConverter - Applying SKOS post-processings on the result
+15:51:02.004  618  DEBUG f.s.r.x.postprocess.QBPostProcessor - Postprocessing : QBPostProcessor
+15:51:02.011  625  DEBUG f.s.r.x.p.OWLPostProcessor - Postprocessing : OWLPostProcessor
+15:51:02.012  626  DEBUG f.s.r.x.p.SkosPostProcessor - Postprocessing : SkosPostProcessor
+15:51:02.013  627  DEBUG f.s.r.x.p.SkosPostProcessor - Considering main resource like a ConceptScheme.
+15:51:02.017  631  DEBUG f.s.r.x.p.SkosPostProcessor - Adding inverse skos:broader and skos:narrower
+15:51:02.019  633  DEBUG f.s.r.x.p.SkosPostProcessor - Adding skos:inScheme
+15:51:02.023  637  DEBUG f.s.r.x.p.SkosPostProcessor - Setting rdf:type skos:ConceptScheme to main resource
+15:51:02.023  637  DEBUG f.s.r.x.p.SkosPostProcessor - Adding skos:hasTopConcept / skos:topConceptOf
+15:51:02.026  640  DEBUG f.s.rdf.xls2rdf.Xls2RdfConverter - Saving graph of 1052 statements generated from Sheet SKOS

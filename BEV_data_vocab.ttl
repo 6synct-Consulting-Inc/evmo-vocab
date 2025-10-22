@@ -1,0 +1,1134 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix bev: <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> a skos:ConceptScheme;
+  dct:title "BEV Data"@en;
+  dct:description "Description of BEV and BEV support equipment data types"@en;
+  skos:hasTopConcept <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfleet_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_year>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_service_year>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrebuild_count>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllast_rebuild_year>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_name>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmanufacturer>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfunctional_location>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_system_architecture>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_type>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_class>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_function>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcurb_weight>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlgross_vehicle_weight>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpurchase_cost>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_range>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_efficiency>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_torque>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlauxiliary_powered_heater>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_charge_rate>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge connector>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_start>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_end>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_hours>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_distance>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_idling_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttldriving_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_run_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlqueue_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_swapping_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstart_location>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlend_location>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllocation>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_speed>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlspeed>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlacceleration>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_charging_sessions>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_ambient_temperature>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_odometer>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_odometer>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltraction_energy>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhv_accessories_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllv_accessories_energy>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpayload>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinclination>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_type>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_description>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_date_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_status>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpack_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodule_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcell_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_chemistry>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_cells>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_modules>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_packs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_mass>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_soc>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_soc>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc_used>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_consumption>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlregen_energy_generation>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnet_energy_consumption>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_voltage>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_current>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_voltage>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_current>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_temperature>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoh>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlconnector_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_power>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_location>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_start_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_end_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_rate>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_energy_delivered>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_description>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_status>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltechnician_name>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_type>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpriority>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_center>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_start>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_end>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_costs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpart_costs>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllabour_costs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_in_workshop>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllogistic_delay>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_to_repair>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlidle_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_to_repair>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_failures>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_maintenance> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_data> a skos:Collection;
+  skos:prefLabel "Vehicle Data"@en;
+  skos:definition "All data relating to the description and use of a battery electric vehicle (BEV)"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfleet_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_year>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_service_year>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrebuild_count>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllast_rebuild_year>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_name>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmanufacturer>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfunctional_location>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_system_architecture>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_type>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_class>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_function>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcurb_weight>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlgross_vehicle_weight>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpurchase_cost>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_range>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_efficiency>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_torque>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlauxiliary_powered_heater>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_charge_rate>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge connector>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_start>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_end>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_hours>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_distance>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_idling_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttldriving_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_run_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlqueue_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_swapping_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstart_location>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlend_location>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllocation>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_speed>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlspeed>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlacceleration>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_charging_sessions>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_ambient_temperature>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_odometer>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_odometer>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltraction_energy>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhv_accessories_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllv_accessories_energy>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpayload>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinclination>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_type>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_description>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_date_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_status>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_data> a skos:Collection;
+  skos:prefLabel "Battery Data"@en;
+  skos:definition "All data relating to the description and use of a BEV battery"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_year>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_service_year>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_name>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmanufacturer>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfunctional_location>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpurchase_cost>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_start>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_end>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_type>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_description>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_date_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_status>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpack_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodule_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcell_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_chemistry>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_cells>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_modules>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_packs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_energy>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_mass>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_soc>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_soc>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc_used>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_consumption>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlregen_energy_generation>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnet_energy_consumption>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_voltage>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_current>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_voltage>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_current>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_temperature>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoh>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_data> a skos:Collection;
+  skos:prefLabel "Charger Data"@en;
+  skos:definition "All data relating to the description and use of a BEV charger and support equipment"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_year>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_service_year>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_name>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmanufacturer>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfunctional_location>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpurchase_cost>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_start>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_end>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_type>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_description>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_date_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_status>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlconnector_id>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_power>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_power>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_location>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_start_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_end_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_power>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_rate>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_energy_delivered>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfacility_data> a skos:Collection;
+  skos:prefLabel "Facility Data"@en;
+  skos:definition "All data relating to the description and use of a BEV charging or maintenance facility"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmaintenance_data> a skos:Collection;
+  skos:prefLabel "Maintenance Data"@en;
+  skos:definition "All data relating to BEV maintenance activities"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_id>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_description>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_status>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltechnician_name>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_type>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpriority>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_center>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_start>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_end>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_costs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpart_costs>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllabour_costs>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_in_workshop>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttllogistic_delay>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_to_repair>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlidle_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_to_repair>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_failures>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_maintenance>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_down_time>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_data> a skos:Collection;
+  skos:prefLabel "Production Data"@en;
+  skos:definition "All data relating to BEV production"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcalendar_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlscheduled_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlunscheduled_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttldown_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailable_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstandby_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_standby_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlexternal_standby_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_delay>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlworking_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnon-productive_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproductive_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlup_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlphysical_availability>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmechanical_availability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttluse_of_availability>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlasset_utilization>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_utilization>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffective_utilization>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_efficiency>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_effectiveness>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloverall_equipment_effectiveness>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_operating_time>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability_kpis> a skos:Collection;
+  skos:prefLabel "Availability KPIs"@en;
+  skos:definition "Key Performance Indicators (KPIs) relating to equipment availability"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlup_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlphysical_availability>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmechanical_availability>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlutilization_kpis> a skos:Collection;
+  skos:prefLabel "Utilization KPIs"@en;
+  skos:definition "Key Performance Indicators (KPIs) relating to equipment utilization"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttluse_of_availability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlasset_utilization>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_utilization>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffective_utilization>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffectiveness_kpis> a skos:Collection;
+  skos:prefLabel "Effectiveness KPIs"@en;
+  skos:definition "Key Performance Indicators (KPIs) relating to equipment effectiveness"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_efficiency>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_effectiveness>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloverall_equipment_effectiveness>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmaintenance_kpis> a skos:Collection;
+  skos:prefLabel "Maintenance KPIs"@en;
+  skos:definition "Key Performance Indicators (KPIs) relating to equipment maintenance"@en;
+  skos:member <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_to_repair>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_failures>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_maintenance>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_down_time>;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_id> a skos:Concept;
+  skos:prefLabel "Vehicle ID"@en;
+  skos:definition "The ID number for the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_id> a skos:Concept;
+  skos:prefLabel "Battery ID"@en;
+  skos:definition "The ID number for the battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfleet_id> a skos:Concept;
+  skos:prefLabel "Fleet ID"@en;
+  skos:definition "The ID number for the fleet"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_year> a skos:Concept;
+  skos:prefLabel "Model Year"@en;
+  skos:definition "Year manufactured"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_service_year> a skos:Concept;
+  skos:prefLabel "Initial Service Year"@en;
+  skos:definition "Starting year of operations"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrebuild_count> a skos:Concept;
+  skos:prefLabel "Rebuild Count"@en;
+  skos:definition "Number of times vehicle has been rebuilt"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttllast_rebuild_year> a skos:Concept;
+  skos:prefLabel "Last Rebuild Year"@en;
+  skos:definition "Year of last rebuild"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel_name> a skos:Concept;
+  skos:prefLabel "Model Name"@en;
+  skos:definition "Vehicle model name/model number"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmanufacturer> a skos:Concept;
+  skos:prefLabel "Manufacturer"@en;
+  skos:definition "Equipment manufacturer"@en, "Battery manufacturer"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfunctional_location> a skos:Concept;
+  skos:prefLabel "Functional Location"@en;
+  skos:definition "Assigned functional location (code-named region) within the mine"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_system_architecture>
+  a skos:Concept;
+  skos:prefLabel "Energy System Architecture"@en;
+  skos:definition "Type of vehicle powertrain"@en;
+  skos:example "BEV (battery electric vehicle), PHEV (plug-in hybrid electric vehicle, HEV (hydrogen electric vehicle)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_type> a skos:Concept;
+  skos:prefLabel "Vehicle Type"@en;
+  skos:definition "Class of mining vehicle"@en;
+  skos:example "LHD, haul truck, drill rig, utility vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_class> a skos:Concept;
+  skos:prefLabel "Vehicle Class"@en;
+  skos:definition "Sub-class of mining vehicle"@en;
+  skos:example "Narrow vein LHD, bolter, shotcrete sprayer"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_function> a skos:Concept;
+  skos:prefLabel "Vehicle Function"@en;
+  skos:definition "Core function vehicle is used for"@en;
+  skos:example "Hauling, loading, drilling, personnel transport, logistics"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcurb_weight> a skos:Concept;
+  skos:prefLabel "Curb Weight"@en;
+  skos:definition "Total mass of the vehicle with all equipment and consumables"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlgross_vehicle_weight> a skos:Concept;
+  skos:prefLabel "Gross Vehicle Weight"@en;
+  skos:definition "Maximum operating mass of the vehicle including all equipment and payload"@en;
+  skos:notation "GVW"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpurchase_cost> a skos:Concept;
+  skos:prefLabel "Purchase Cost"@en;
+  skos:definition "Purchase cost of the equipment"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_range> a skos:Concept;
+  skos:prefLabel "Nominal Range"@en;
+  skos:definition "Manufacturer-provided indicative driving range"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnominal_efficiency> a skos:Concept;
+  skos:prefLabel "Nominal Efficiency"@en;
+  skos:definition "Manufacturer-provided indicative powertrain energy efficiency"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_power> a skos:Concept;
+  skos:prefLabel "Peak Power"@en;
+  skos:definition "Peak power output of the traction motor(s)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpeak_torque> a skos:Concept;
+  skos:prefLabel "Peak Torque"@en;
+  skos:definition "Peak torque of the traction motor(s)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlauxiliary_powered_heater> a
+    skos:Concept;
+  skos:prefLabel "Auxiliary Powered Heater"@en;
+  skos:definition "Auxiliary powered heating system on the vehicle?"@en;
+  skos:example "Yes/No"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_charge_rate> a skos:Concept;
+  skos:prefLabel "Max Charge Rate"@en;
+  skos:definition "Maximum charging rate of the battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge connector> a skos:Concept;
+  skos:prefLabel "Charge Connector"@en;
+  skos:definition "Type of charging connector"@en;
+  skos:example "CCS Combo Type 1, CCS Combo Type 2, CHAdeMO"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_start> a skos:Concept;
+  skos:prefLabel "Measurement Start"@en;
+  skos:definition "Starting date/time of data collection period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmeasurement_end> a skos:Concept;
+  skos:prefLabel "Measurement End"@en;
+  skos:definition "End date/time of data collection period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_hours> a skos:Concept;
+  skos:prefLabel "Vehicle Hours"@en;
+  skos:definition "Total operational hours on the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_distance> a skos:Concept;
+  skos:prefLabel "Total Distance"@en;
+  skos:definition "Total distance travelled in the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlvehicle_idling_time> a skos:Concept;
+  skos:prefLabel "Vehicle Idling Time"@en;
+  skos:definition "Time spent idling by the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttldriving_time> a skos:Concept;
+  skos:prefLabel "Driving Time"@en;
+  skos:definition "Time spent driving by the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_run_time> a skos:Concept;
+  skos:prefLabel "Total Run Time"@en;
+  skos:definition "Total operating time for the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlqueue_time> a skos:Concept;
+  skos:prefLabel "Queue Time"@en;
+  skos:definition "Time spent queueing by the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_swapping_time> a skos:Concept;
+  skos:prefLabel "Battery Swapping Time"@en;
+  skos:definition "Time spent swapping the battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstart_location> a skos:Concept;
+  skos:prefLabel "Start Location"@en;
+  skos:definition "Location at start of measurement period (latitude, longitude, elevation)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlend_location> a skos:Concept;
+  skos:prefLabel "End Location"@en;
+  skos:definition "Location at end of measurement period (latitude, longitude, elevation)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttllocation> a skos:Concept;
+  skos:prefLabel "Location"@en;
+  skos:definition "Instantaneous location of vehicle (latitude, longitude, elevation)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_speed> a skos:Concept;
+  skos:prefLabel "Average Speed"@en;
+  skos:definition "Average speed for the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlspeed> a skos:Concept;
+  skos:prefLabel "Speed"@en;
+  skos:definition "Speed of the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlacceleration> a skos:Concept;
+  skos:prefLabel "Acceleration"@en;
+  skos:definition "Acceleration of the vehicle"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_charging_sessions>
+  a skos:Concept;
+  skos:prefLabel "Number of Charging Sessions"@en;
+  skos:definition "Number of charging sessions in the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_ambient_temperature>
+  a skos:Concept;
+  skos:prefLabel "Average Ambient Temperature"@en;
+  skos:definition "Average ambient temperature for the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_odometer> a skos:Concept;
+  skos:prefLabel "Initial Odometer"@en;
+  skos:definition "Odometer reading at the start of the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_odometer> a skos:Concept;
+  skos:prefLabel "Final Odometer"@en;
+  skos:definition "Odometer reading at the end of the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltraction_energy> a skos:Concept;
+  skos:prefLabel "Traction Energy"@en;
+  skos:definition "Energy used by the traction system"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_energy> a skos:Concept;
+  skos:prefLabel "Hydraulic System Energy"@en;
+  skos:definition "Energy used by the hydraulic system"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhydraulic_system_power> a skos:Concept;
+  skos:prefLabel "Hydraulic System Power"@en;
+  skos:definition "Power output of the hydraulic system"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlhv_accessories_energy> a skos:Concept;
+  skos:prefLabel "HV Accessories Energy"@en;
+  skos:definition "Energy used by any high voltage system components"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttllv_accessories_energy> a skos:Concept;
+  skos:prefLabel "LV Accessories Energy"@en;
+  skos:definition "Energy used by any low voltage system components"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpayload> a skos:Concept;
+  skos:prefLabel "Payload"@en;
+  skos:definition "Vehicle payload"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinclination> a skos:Concept;
+  skos:prefLabel "Inclination"@en;
+  skos:definition "Inclination of the vehicle, used to determine road grade"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_id> a skos:Concept;
+  skos:prefLabel "Alert ID"@en;
+  skos:definition "Vehicle errors and alert codes"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_type> a skos:Concept;
+  skos:prefLabel "Alert Type"@en;
+  skos:definition "Type of vehicle error/alert"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_description> a skos:Concept;
+  skos:prefLabel "Alert Description"@en;
+  skos:definition "Description of vehicle error/alert"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_date_time> a skos:Concept;
+  skos:prefLabel "Alert Date Time"@en;
+  skos:definition "Date/time of vehicle error/alert"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlalert_status> a skos:Concept;
+  skos:prefLabel "Alert Status"@en;
+  skos:definition "Current status of vehicle error/alert"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpack_id> a skos:Concept;
+  skos:prefLabel "Pack ID"@en;
+  skos:definition "The ID number for the pack (or sub-pack)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodule_id> a skos:Concept;
+  skos:prefLabel "Module ID"@en;
+  skos:definition "The ID number for the module"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcell_id> a skos:Concept;
+  skos:prefLabel "Cell ID"@en;
+  skos:definition "The ID number for the cell"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_chemistry> a skos:Concept;
+  skos:prefLabel "Battery Chemistry"@en;
+  skos:definition "Battery cell chemistry"@en;
+  skos:example "LFP, NCM, NCA, LTO, etc."@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_cells> a skos:Concept;
+  skos:prefLabel "Number of Cells"@en;
+  skos:definition "Number of cells in battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_modules> a skos:Concept;
+  skos:prefLabel "Number of Modules"@en;
+  skos:definition "Number of modules in battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnumber_of_packs> a skos:Concept;
+  skos:prefLabel "Number of Packs"@en;
+  skos:definition "Number of packs (or sub-packs) in battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_energy> a skos:Concept;
+  skos:prefLabel "Rated Energy"@en;
+  skos:definition "Rated energy capacity of the battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmodel> a skos:Concept;
+  skos:prefLabel "Model"@en;
+  skos:definition "Battery model name/number"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_mass> a skos:Concept;
+  skos:prefLabel "Battery Mass"@en;
+  skos:definition "The mass of the battery"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlinitial_soc> a skos:Concept;
+  skos:prefLabel "Initial SOC"@en;
+  skos:definition "State of Charge (SOC) at the start of the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlfinal_soc> a skos:Concept;
+  skos:prefLabel "Final SOC"@en;
+  skos:definition "State of Charge (SOC) at the end of the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc> a skos:Concept;
+  skos:prefLabel "SOC"@en;
+  skos:definition "Battery State of Charge (SOC) reading"@en;
+  skos:notation "SOC"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoc_used> a skos:Concept;
+  skos:prefLabel "SOC Used"@en;
+  skos:definition "State of Charge (SOC) used during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlenergy_consumption> a skos:Concept;
+  skos:prefLabel "Energy Consumption"@en;
+  skos:definition "Energy delivered by battery to the powertrain during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlregen_energy_generation> a skos:Concept;
+  skos:prefLabel "Regen Energy Generation"@en;
+  skos:definition "Energy regenerated to the battery during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnet_energy_consumption> a skos:Concept;
+  skos:prefLabel "Net Energy Consumption"@en;
+  skos:definition "Net energy consumed during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_voltage> a skos:Concept;
+  skos:prefLabel "Average Battery Voltage"@en;
+  skos:definition "Average battery voltage during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlaverage_battery_current> a skos:Concept;
+  skos:prefLabel "Average Battery Current"@en;
+  skos:definition "Average battery current during the measurement period"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_voltage> a skos:Concept;
+  skos:prefLabel "Battery Voltage"@en;
+  skos:definition "Battery voltage reading"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_power> a skos:Concept;
+  skos:prefLabel "Battery Power"@en;
+  skos:definition "Battery power reading"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_current> a skos:Concept;
+  skos:prefLabel "Battery Current"@en;
+  skos:definition "Battery current reading"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlbattery_temperature> a skos:Concept;
+  skos:prefLabel "Battery Temperature"@en;
+  skos:definition "Battery temperature reading"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlsoh> a skos:Concept;
+  skos:prefLabel "SOH"@en;
+  skos:definition "Battery State of Health (SOH) reading"@en;
+  skos:notation "SOH"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_id> a skos:Concept;
+  skos:prefLabel "Charger ID"@en;
+  skos:definition "The ID number for the charger"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlconnector_id> a skos:Concept;
+  skos:prefLabel "Connector ID"@en;
+  skos:definition "The ID number for the connector"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmax_power> a skos:Concept;
+  skos:prefLabel "Max Power"@en;
+  skos:definition "The maximum power deliverable by the charger"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlrated_power> a skos:Concept;
+  skos:prefLabel "Rated Power"@en;
+  skos:definition "The rated power for the charger"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharger_location> a skos:Concept;
+  skos:prefLabel "Charger Location"@en;
+  skos:definition "Location of the charger (latitute/longitude/elevation or location ID)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_start_time> a skos:Concept;
+  skos:prefLabel "Charge Start Time"@en;
+  skos:definition "The start date/time of a charging session"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharge_end_time> a skos:Concept;
+  skos:prefLabel "Charge End Time"@en;
+  skos:definition "The end date/time of a charging session"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_time> a skos:Concept;
+  skos:prefLabel "Charging Time"@en;
+  skos:definition "The duration of a charging session"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_power> a skos:Concept;
+  skos:prefLabel "Charging Power"@en;
+  skos:definition "Charger power reading"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcharging_rate> a skos:Concept;
+  skos:prefLabel "Charging Rate"@en;
+  skos:definition "The charging rate (or C-Rate)"@en;
+  skos:example "0.5C, 1C, 2C, 5C"@en;
+  skos:notation "C-Rate"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_energy_delivered> a skos:Concept;
+  skos:prefLabel "Total Energy Delivered"@en;
+  skos:definition "The energy delivered by the charger over a charging session"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_id> a skos:Concept;
+  skos:prefLabel "Work Order ID"@en;
+  skos:definition "The ID number for the maintenance work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_description> a skos:Concept;
+  skos:prefLabel "Work Order Description"@en;
+  skos:definition "A description of the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_status> a skos:Concept;
+  skos:prefLabel "Work Order Status"@en;
+  skos:definition "The status of the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltechnician_name> a skos:Concept;
+  skos:prefLabel "Technician Name"@en;
+  skos:definition "Name of the technician responsible for the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_type> a skos:Concept;
+  skos:prefLabel "Work Order Type"@en;
+  skos:definition "Type of work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpriority> a skos:Concept;
+  skos:prefLabel "Priority"@en;
+  skos:definition "Priority level for the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_center> a skos:Concept;
+  skos:prefLabel "Work Center"@en;
+  skos:definition "Work Center the work order is assigned to"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_start> a skos:Concept;
+  skos:prefLabel "Work Order Start"@en;
+  skos:definition "Start date/time for the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlwork_order_end> a skos:Concept;
+  skos:prefLabel "Work Order End"@en;
+  skos:definition "End data/time for the work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltotal_costs> a skos:Concept;
+  skos:prefLabel "Total Costs"@en;
+  skos:definition "Total cost of work order"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlpart_costs> a skos:Concept;
+  skos:prefLabel "Part Costs"@en;
+  skos:definition "Part replacement costs"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttllabour_costs> a skos:Concept;
+  skos:prefLabel "Labour Costs"@en;
+  skos:definition "Labour costs"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_in_workshop> a skos:Concept;
+  skos:prefLabel "Time in Workshop"@en;
+  skos:definition "Time spent in workshop"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttllogistic_delay> a skos:Concept;
+  skos:prefLabel "Logistic Delay"@en;
+  skos:definition "Time spent in workshop delayed for logistical reasons"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttltime_to_repair> a skos:Concept;
+  skos:prefLabel "Time To Repair"@en;
+  skos:definition "Time to repair"@en;
+  skos:notation "TTR"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlidle_time> a skos:Concept;
+  skos:prefLabel "Idle Time"@en;
+  skos:definition "Idle time waiting for repair"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_to_repair> a skos:Concept;
+  skos:prefLabel "Mean Time To Repair"@en;
+  skos:definition "Mean time to repair"@en;
+  skos:notation "MTTR"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_failures>
+  a skos:Concept;
+  skos:prefLabel "Mean Time Between Failures"@en;
+  skos:definition "Mean time between failures"@en;
+  skos:notation "MTBF"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_time_between_maintenance>
+  a skos:Concept;
+  skos:prefLabel "Mean Time Between Maintenance"@en;
+  skos:definition "Mean time between maintenance"@en;
+  skos:notation "MTBM"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl>;
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_down_time> a skos:Concept;
+  skos:prefLabel "Mean Down Time"@en;
+  skos:definition "Mean down time"@en;
+  skos:notation "MDT"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcalendar_time> a skos:Concept;
+  skos:prefLabel "Calendar Time"@en;
+  skos:definition "Total time available"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlscheduled_time> a skos:Concept;
+  skos:prefLabel "Scheduled Time"@en;
+  skos:definition "Time spent assigned to a task (scheduled time = calendar time - unscheduled time)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlunscheduled_time> a skos:Concept;
+  skos:prefLabel "Unscheduled Time"@en;
+  skos:definition "Time spent unassigned to any tasks"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttldown_time> a skos:Concept;
+  skos:prefLabel "Down Time"@en;
+  skos:definition "Time equipment is unavailable to perform its intended tasks"@en;
+  skos:notation "DT"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailable_time> a skos:Concept;
+  skos:prefLabel "Available Time"@en;
+  skos:definition "Time equipment is available to perform its intended tasks (available time = scheduled time - down time)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstandby_time> a skos:Concept;
+  skos:prefLabel "Standby Time"@en;
+  skos:definition "Time equipment is available but not operating (standby time = operating standby time + external standby time)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_standby_time> a skos:Concept;
+  skos:prefLabel "Operating Standby Time"@en;
+  skos:definition "Time spent on standby for reasons within management control"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlexternal_standby_time> a skos:Concept;
+  skos:prefLabel "External Standby Time"@en;
+  skos:definition "Time spent on standby for reasons outside of management control"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_time> a skos:Concept;
+  skos:prefLabel "Operating Time"@en;
+  skos:definition "Time equipment is available and operating (operating time = available time - standby time)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_delay> a skos:Concept;
+  skos:prefLabel "Operating Delay"@en;
+  skos:definition "Time equipment is operating but temporarily stalled due to delays/working environment conditions"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlworking_time> a skos:Concept;
+  skos:prefLabel "Working Time"@en;
+  skos:definition "Time equipment is operating as intended, carrying out both productive and non-productive tasks (working time = operating time - operating delay)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnon-productive_time> a skos:Concept;
+  skos:prefLabel "Non-Productive Time"@en;
+  skos:definition "Time spent on required tasks that do not directly contribute to production"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproductive_time> a skos:Concept;
+  skos:prefLabel "Productive Time"@en;
+  skos:definition "Time spent carrying out tasks that directly contribute to production (productive time = working time - non-productive time)"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlup_time> a skos:Concept;
+  skos:prefLabel "Up Time"@en;
+  skos:definition "The time equipment is capable of operating (Uptime = Available Time / Calendar Time)"@en;
+  skos:notation "UT"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability> a skos:Concept;
+  skos:prefLabel "Availability"@en;
+  skos:definition "Time equipment is available outside of scheduled and unscheduled downtime (Availability = MTBM / (MTBM + MDT))"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlphysical_availability> a skos:Concept;
+  skos:prefLabel "Physical Availability"@en;
+  skos:definition "The percentage of time equipment is available to perform its intended function over a defined period when it is required by the operation"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmechanical_availability> a skos:Concept;
+  skos:prefLabel "Mechanical Availability"@en;
+  skos:definition "The time the equipment is available as a percentage of the time it is required by the operation"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttluse_of_availability> a skos:Concept;
+  skos:prefLabel "Use of Availability"@en;
+  skos:definition "The time the equipment is operated as a percentage of the available time"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlasset_utilization> a skos:Concept;
+  skos:prefLabel "Asset Utilization"@en;
+  skos:definition "The time the equipment is being operated as a percentage of the total time available"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_utilization> a skos:Concept;
+  skos:prefLabel "Operating Utilization"@en;
+  skos:definition "The percentage of time the asset is being operated when it is scheduled to operate"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffective_utilization> a skos:Concept;
+  skos:prefLabel "Effective Utilization"@en;
+  skos:definition "The time the equipment is used to perform its intended function as a percentage of the time that it is scheduled to work"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_efficiency> a skos:Concept;
+  skos:prefLabel "Operating Efficiency"@en;
+  skos:definition "The time the equipment is performing its intended function asa percentage of the time that it is operating"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_effectiveness> a
+    skos:Concept;
+  skos:prefLabel "Production Effectiveness"@en;
+  skos:definition "The time the equipment is directly contributing to production as a percentage of the time that it is operating"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloverall_equipment_effectiveness>
+  a skos:Concept;
+  skos:prefLabel "Overall Equipment Effectiveness"@en;
+  skos:definition "A measure of the effectiveness of the equipment compared to its full potential (OEE = Availability * Performance * Quality)"@en;
+  skos:notation "OEE"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_operating_time> a skos:Concept;
+  skos:prefLabel "Mean Operating Time"@en;
+  skos:definition "The average time spent operating (Average of Operating Time)"@en;
+  skos:notation "MOT"@en;
+  skos:inScheme <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> skos:hasTopConcept <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_down_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcalendar_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlscheduled_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlunscheduled_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttldown_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailable_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstandby_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_standby_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlexternal_standby_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_delay>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlworking_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnon-productive_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproductive_time>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlup_time>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlphysical_availability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmechanical_availability>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttluse_of_availability>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlasset_utilization>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_utilization>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffective_utilization>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_efficiency>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_effectiveness>, <https://zero.nexus/wp-content/uploads/2025/10/bev.ttloverall_equipment_effectiveness>,
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_operating_time> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_down_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlcalendar_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlscheduled_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlunscheduled_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttldown_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailable_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlstandby_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_standby_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlexternal_standby_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_delay> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlworking_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlnon-productive_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproductive_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlup_time> skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlavailability> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlphysical_availability> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmechanical_availability> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttluse_of_availability> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlasset_utilization> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_utilization> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttleffective_utilization> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloperating_efficiency> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlproduction_effectiveness> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttloverall_equipment_effectiveness>
+  skos:topConceptOf <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
+
+<https://zero.nexus/wp-content/uploads/2025/10/bev.ttlmean_operating_time> skos:topConceptOf
+    <https://zero.nexus/wp-content/uploads/2025/10/bev.ttl> .
