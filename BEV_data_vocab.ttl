@@ -54,8 +54,8 @@ bev:battery_data a skos:Concept;
     bev:measurement_end, bev:alert_id, bev:alert_type, bev:alert_description, bev:alert_date_time,
     bev:alert_status, bev:pack_id, bev:module_id, bev:cell_id, bev:battery_chemistry,
     bev:number_of_cells, bev:number_of_modules, bev:number_of_packs, bev:rated_energy,
-    bev:model, bev:battery_mass, bev:initial_soc, bev:final_soc, bev:soc, bev:soc_used,
-    bev:energy_consumption, bev:regen_energy_generation, bev:net_energy_consumption, bev:average_battery_voltage,
+    bev:battery_mass, bev:initial_soc, bev:final_soc, bev:soc, bev:soc_used, bev:energy_consumption,
+    bev:regen_energy_generation, bev:net_energy_consumption, bev:average_battery_voltage,
     bev:average_battery_current, bev:battery_voltage, bev:battery_power, bev:battery_current,
     bev:battery_temperature, bev:soh;
   skos:inScheme <https://zero.nexus/bev-data-vocabulary/>;
@@ -516,12 +516,6 @@ bev:number_of_packs a skos:Concept;
 bev:rated_energy a skos:Concept;
   skos:prefLabel "Rated Energy"@en;
   skos:definition "Rated energy capacity of the battery"@en;
-  skos:broader bev:battery_data;
-  skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
-
-bev:model a skos:Concept;
-  skos:prefLabel "Model"@en;
-  skos:definition "Battery model name/number"@en;
   skos:broader bev:battery_data;
   skos:inScheme <https://zero.nexus/bev-data-vocabulary/> .
 
