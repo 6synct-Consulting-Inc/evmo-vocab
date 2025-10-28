@@ -1,0 +1,108 @@
+{
+"Work Centre":
+  [
+    "Mechanical",
+    "Electrical"
+  ],
+"Work Order":
+  {
+    "Mechanical":
+      {
+        "actions":
+          [
+            "replace",
+            "repair",
+            "install",
+            "check",
+            "change",
+            "diagnose",
+            "inspect",
+            "deliver"
+          ],
+        "systems":
+          [
+            "brakes",
+            "hydraulics",
+            "bushings/assembly",
+            "AC unit",
+            "wheel studs",
+            "drive",
+            "valve",
+            "cab mounts/bolts",
+            "handle",
+            "fire suppression",
+            "filters",
+            "greaser",
+            "transmission fluid",
+            "tires"
+          ]
+      },
+    "Electrical":
+      {
+        "systems":
+          [
+            "cables",
+            "HV connector",
+            "LV connector",
+            "battery",
+            "CAN",
+            "thermal management system",
+            "contactor",
+            "traction inverter",
+            "charger",
+            "communications",
+            "controller",
+            "HVIL",
+            "MSD",
+            "pack",
+            "traction motor"
+          ],
+        "issues":
+          [
+            "fault",
+            "issues",
+            "down",
+            "damaged",
+            "failure",
+            "damaged",
+            "warning"
+          ]
+      }
+  },
+"Owner":
+  {
+    "Mechanical":
+      [
+        "John B",
+        "Nunzia R",
+        "Janaka P",
+        "Reg D",
+        "York E",
+        "Lloyd D",
+        "Calla B",
+        "Ben R",
+        "Mel P",
+        "Bill D"
+      ],
+    "Electrical":
+      [
+        "George F",
+        "Roger S",
+        "Urpi H",
+        "Sarah K",
+        "Rose R",
+        "Lloyd D",
+        "Lutz J",
+        "Tuva L",
+        "Marit P",
+        "Nelu R"
+      ]
+  },
+"Category":
+  [
+    "BEV Haul Truck",
+    "BEV LHD",
+    "BEV Light Truck",
+    "BEV Drill Rig"
+  ]
+}
