@@ -10,14 +10,14 @@
       {
         "actions":
           [
-            "replace",
-            "repair",
-            "install",
-            "check",
-            "change",
-            "diagnose",
-            "inspect",
-            "deliver"
+            "Replace",
+            "Repair",
+            "Install",
+            "Check",
+            "Change",
+            "Diagnose",
+            "Inspect",
+            "Deliver"
           ],
         "systems":
           [
@@ -41,21 +41,21 @@
       {
         "systems":
           [
-            "cables",
+            "Cables",
             "HV connector",
             "LV connector",
-            "battery",
+            "Battery",
             "CAN",
-            "thermal management system",
-            "contactor",
-            "traction inverter",
-            "charger",
-            "communications",
-            "controller",
+            "Thermal management system",
+            "Contactor",
+            "Traction inverter",
+            "Charger",
+            "Communications",
+            "Controller",
             "HVIL",
             "MSD",
-            "pack",
-            "traction motor"
+            "Pack",
+            "Traction motor"
           ],
         "issues":
           [
@@ -91,7 +91,6 @@
         "Urpi H",
         "Sarah K",
         "Rose R",
-        "Lloyd D",
         "Lutz J",
         "Tuva L",
         "Marit P",
